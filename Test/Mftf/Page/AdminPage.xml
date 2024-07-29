@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Mavenbird Technologies Private Limited
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the EULA
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://mavenbird.com/Mavenbird-Module-License.txt
+ *
+ * =================================================================
+ *
+ * @category   Mavenbird
+ * @package    Mavenbird_Shiprestriction
+ * @author     Mavenbird Team
+ * @copyright  Copyright (c) 2018-2024 Mavenbird Technologies Private Limited ( http://mavenbird.com )
+ * @license    http://mavenbird.com/Mavenbird-Module-License.txt
+ */
+-->
+<pages xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="urn:magento:mftf:Page/etc/PageObject.xsd">
+
+    <page name="AdminShiprestrictionConfigurationPage" url="/admin/system_config/edit/section/shiprestriction/" area="admin" module="Magento_Shiprestriction">
+        <section name="AdminConfigurationsShiprestrictionSection"/>
+    </page>
+
+    <page name="AdminShippingRestrictionsGridPage" url="/mavenbird_shiprestriction/rule/index/" area="admin" module="Magento_Shiprestriction">
+        <section name="AdminShippingRestrictionsGridSection"/>
+    </page>
+
+</pages>

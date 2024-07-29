@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<!-- /**
+ * Mavenbird Technologies Private Limited
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the EULA
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://mavenbird.com/Mavenbird-Module-License.txt
+ *
+ * =================================================================
+ *
+ * @category   Mavenbird
+ * @package    Mavenbird_Shiprestriction
+ * @author     Mavenbird Team
+ * @copyright  Copyright (c) 2018-2024 Mavenbird Technologies Private Limited ( http://mavenbird.com )
+ * @license    http://mavenbird.com/Mavenbird-Module-License.txt
+ */ -->
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="mavenbird_shiprestriction_rule" resource="default" engine="innodb" comment="Mavenbird Shiprestriction Rule Table">
+        <column xsi:type="int" name="rule_id" padding="10" unsigned="true" nullable="false" identity="true" comment="Rule ID"/>
+        <column xsi:type="boolean" name="is_active" nullable="false" default="0" comment="Is Active"/>
+        <column xsi:type="smallint" name="for_admin" nullable="false" comment="For Admin"/>
+        <column xsi:type="smallint" name="out_of_stock" nullable="false" comment="Out of Stock"/>
+        <column xsi:type="boolean" name="all_stores" nullable="false" default="0" comment="All Stores"/>
+        <column xsi:type="boolean" name="all_groups" nullable="false" default="0" comment="All Groups"/>
+        <column xsi:type="text" name="name" nullable="false" comment="Name"/>
+        <column xsi:type="text" name="coupon" nullable="true" comment="Coupon"/>
+        <column xsi:type="int" name="discount_id" unsigned="true" nullable="false" comment="Discount ID"/>
+        <column xsi:type="text" name="days" nullable="true" comment="Days"/>
+        <column xsi:type="int" name="time_from" nullable="false" unsigned="true" default="0" comment="Time From"/>
+        <column xsi:type="int" name="time_to" nullable="false" unsigned="true" default="0" comment="Time To"/>
+        <column xsi:type="text" name="stores" nullable="false" comment="Stores"/>
+        <column xsi:type="text" name="cust_groups" nullable="false" comment="Customer Groups"/>
+        <column xsi:type="text" name="message" nullable="true" comment="Message"/>
+        <column xsi:type="text" name="carriers" nullable="true" comment="Carriers"/>
+        <column xsi:type="text" name="methods" nullable="true" comment="Methods"/>
+        <column xsi:type="text" name="conditions_serialized" nullable="true" comment="Serialized Conditions"/>
+        <column xsi:type="text" name="coupon_disable" nullable="true" comment="Coupon Disable"/>
+        <column xsi:type="int" name="discount_id_disable" unsigned="true" nullable="true" default="0" comment="Discount ID Disable"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="rule_id"/>
+        </constraint>
+    </table>
+    <table name="mavenbird_shiprestriction_attribute" resource="default" engine="innodb" comment="Mavenbird Shiprestriction Attribute Table">
+        <column xsi:type="int" name="attr_id" padding="10" unsigned="true" nullable="false" identity="true" comment="Attribute ID"/>
+        <column xsi:type="int" name="rule_id" padding="10" unsigned="true" nullable="false" comment="Rule ID"/>
+        <column xsi:type="text" name="code" nullable="true" comment="Code"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="attr_id"/>
+        </constraint>
+        <constraint xsi:type="foreign" referenceId="FK_RULE_ID" table="mavenbird_shiprestriction_attribute" column="rule_id"
+                    referenceTable="mavenbird_shiprestriction_rule" referenceColumn="rule_id" onDelete="CASCADE"/>
+        <index referenceId="IDX_RULE_ID" indexType="btree">
+            <column name="rule_id"/>
+        </index>
+    </table>
+</schema>

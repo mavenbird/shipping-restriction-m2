@@ -1,0 +1,41 @@
+<!-- /**
+ * Mavenbird Technologies Private Limited
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the EULA
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://mavenbird.com/Mavenbird-Module-License.txt
+ *
+ * =================================================================
+ *
+ * @category   Mavenbird
+ * @package    Mavenbird_Shiprestriction
+ * @author     Mavenbird Team
+ * @copyright  Copyright (c) 2018-2024 Mavenbird Technologies Private Limited ( http://mavenbird.com )
+ * @license    http://mavenbird.com/Mavenbird-Module-License.txt
+ */ -->
+
+<div class="admin__field" attr="'data-index': index">
+    <label if="element.label" class="admin__field-label" attr="for: element.uid">
+        <span text="element.label"></span>
+    </label>
+
+    <div class="admin__field-control" data-role="grid-wrapper">
+        <table class="data-grid" data-role="grid">
+            <tbody>
+            <tr class="data-row">
+                <!-- ko foreach: { data: elems, as: 'elem'}  -->
+                <td if="elem.template"
+                    visible="elem.visible"
+                    disable="elem.disabled"
+                    template="elem.template"
+                    style="border: none;"
+                    attr="'data-index': index"></td>
+                <!-- /ko -->
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Mavenbird Technologies Private Limited
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the EULA
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://mavenbird.com/Mavenbird-Module-License.txt
+ *
+ * =================================================================
+ *
+ * @category   Mavenbird
+ * @package    Mavenbird_Shiprestriction
+ * @author     Mavenbird Team
+ * @copyright  Copyright (c) 2018-2024 Mavenbird Technologies Private Limited ( http://mavenbird.com )
+ * @license    http://mavenbird.com/Mavenbird-Module-License.txt
+ */
+-->
+<sections xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="urn:magento:mftf:Page/etc/SectionObject.xsd">
+
+    <section name="AdminProductSection">
+        <!-- Advanced Inventory-->
+        <element name="AdvancedInventory" type="button" selector="//button[@data-index='advanced_inventory_button'][@class='action-additional']" timeout="30"/>
+        <element name="AdvancedInventoryQty" type="input" selector="//div[@data-index='stock_data']//input[@name='product[quantity_and_stock_status][qty]']" timeout="30"/>
+        <element name="CloseAdvancedInventory" type="button" selector="//aside[contains(@class,'advanced_inventory')]//button[@data-role='closeBtn']" timeout="30"/>
+        <element name="Backorders" type="select" selector="//select[@name='product[stock_data][backorders]']"/>
+        <element name="BackordersConfigSetting" type="input" selector="//input[@name='product[stock_data][use_config_backorders]']"/>
+        <element name="BackordersConfigSettingYes" type="block" selector="//input[@name='product[stock_data][use_config_backorders]'][@value='1']"/>
+        <element name="BackordersConfigSettingNo" type="block" selector="//input[@name='product[stock_data][use_config_backorders]'][@value='0']"/>
+    </section>
+
+</sections>

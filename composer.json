@@ -1,0 +1,26 @@
+{
+    "name": "mavenbird/shiprestriction",
+    "description": "Enhance Magento 2 store shipping by selectively restricting carrier methods based on business rules and customer needs.",
+    "require": {
+        "php": ">=8.0.0"
+    },
+    "type": "magento2-module",
+    "version": "1.0.0",
+    "license": "proprietary",
+    "authors": [
+        {
+          "name": "Mavenbird",
+          "email": "support@mavenbird.com",
+          "homepage": "https://www.mavenbird.com",
+          "role": "Technical Support"
+        }
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4":  { 
+            "Mavenbird\\Shiprestriction\\": ""
+        }
+    }
+}
