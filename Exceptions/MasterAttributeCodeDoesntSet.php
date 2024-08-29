@@ -1,5 +1,4 @@
-<?xml version="1.0"?>
-<!--
+<?php
 /**
  * Mavenbird Technologies Private Limited
  *
@@ -18,14 +17,22 @@
  * @copyright  Copyright (c) 2018-2024 Mavenbird Technologies Private Limited ( http://mavenbird.com )
  * @license    http://mavenbird.com/Mavenbird-Module-License.txt
  */
--->
-<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
-    <module name="Mavenbird_Shiprestriction" setup_version="1.0.0">
-        <sequence>
-            <!-- <module name="Mavenbird_Core" /> -->
-            <module name="Magento_SalesRule" />
-            <!-- <module name="Mavenbird_Shiprestriction" /> -->
-        </sequence>
-    </module>
-</config>
+
+
+namespace Mavenbird\Shiprestriction\Exceptions;
+
+class MasterAttributeCodeDoesntSet extends \Magento\Framework\Exception\LocalizedException
+{
+    /**
+     * @param \Magento\Framework\Phrase $phrase
+     * @param \Exception $cause
+     * @param int $code
+     */
+    public function __construct(\Magento\Framework\Phrase $phrase = null, \Exception $cause = null, $code = 0)
+    {
+        if (!$phrase) {
+            $phrase = __('Master Attribute Code doesn\'t set.');
+        }
+        parent::__construct($phrase, $cause, (int) $code);
+    }
+}

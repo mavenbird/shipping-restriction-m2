@@ -28,5 +28,15 @@
                 <error_message>0</error_message>
             </general>
         </shiprestriction>
+        <mavenbird_shiprestriction>
+            <notifications>
+                <type>INFO,PROMO,INSTALLED_UPDATE,TIPS_TRICKS</type>
+                <frequency>5</frequency>
+                <ads_enable>1</ads_enable>
+            </notifications>
+            <menu>
+                <enable>1</enable>
+            </menu>
+        </mavenbird_shiprestriction>
     </default>
 </config>

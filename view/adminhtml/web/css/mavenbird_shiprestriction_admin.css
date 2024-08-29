@@ -1,0 +1,46 @@
+/**
+ * Mavenbird Technologies Private Limited
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the EULA
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://mavenbird.com/Mavenbird-Module-License.txt
+ *
+ * =================================================================
+ *
+ * @category   Mavenbird
+ * @package    Mavenbird_Core
+ * @author     Mavenbird Team
+ * @copyright  Copyright (c) 2018-2024 Mavenbird Technologies Private Limited ( http://mavenbird.com )
+ * @license    http://mavenbird.com/Mavenbird-Module-License.txt
+ */
+
+.admin__menu #menu-mavenbird-core-menu > a::before {
+    content: '' !important;
+    background: url('../images/mm-extansion-logo.png') no-repeat 0px 0px;
+    margin: 0 auto .3rem;
+    width: 28px;
+    height: 25px;
+}
+#menu-mavenbird-core-menu > a:hover::before, 
+#menu-mavenbird-core-menu._show > a::before ,
+.admin__menu #menu-mavenbird-core-menu > a:hover:before {
+    background: url('../images/mm-extansion-logo.png') no-repeat 0px -38px !important;
+}
+/*.mm-extansion-logo {
+    background-image: url('../images/mm-extansion-logo.png');
+    padding: 5px 0px 3px 35px;
+    background-repeat: no-repeat;
+    margin-bottom: 0;
+}*/
+.mavenbird-tab { position: relative; }
+.mavenbird-tab:before {
+content: "";    
+background-image: url('../images/mm-extansion-logo.png');
+padding:0px; background-repeat: no-repeat;
+margin-bottom:0px;  position: absolute; left: 5px; top: 12px; display: block; width: 27px;
+height: 27px; background-position:0px 0px; z-index: 9;
+} 
+

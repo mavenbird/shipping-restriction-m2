@@ -22,7 +22,7 @@ namespace Mavenbird\Shiprestriction\Setup\Patch\Data;
 
 use Magento\Framework\Setup\ModuleDataSetupInterface;
 use Magento\Framework\Setup\Patch\DataPatchInterface;
-use Mavenbird\Core\Setup\SerializedFieldDataConverter;
+use Mavenbird\Shiprestriction\Setup\SerializedFieldDataConverter;
 
 class ConvertSerializedDataToJson implements DataPatchInterface
 {

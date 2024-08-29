@@ -19,8 +19,25 @@
  * @license    http://mavenbird.com/Mavenbird-Module-License.txt
  */
 -->
-<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../Magento/Backend/etc/menu.xsd">
     <menu>
-        <add id="Mavenbird_Shiprestriction::rule"  title="Shipping Restrictions" module="Mavenbird_Shiprestriction" sortOrder="100" parent="Magento_Sales::sales_operation" action="mavenbird_shiprestriction/rule/" resource="Mavenbird_Shiprestriction::rule"/>
+        <update id="Magento_Backend::mbmenu" title="Mavenbird" module="Magento_Backend" sortOrder="10" resource="Magento_Backend::mbmenu" />
+        <add id="Mavenbird_Shiprestriction::Heading" title="Shipping Restrictions" module="Mavenbird_Shiprestriction" sortOrder="20" parent="Magento_Backend::mbmenu" resource="Mavenbird_Shiprestriction::Heading" />
+             
+        <add id="Mavenbird_Shiprestriction::rule"
+             title="Add Shipping Restrictions Rules"
+             module="Mavenbird_Shiprestriction"
+             sortOrder="100"
+             parent="Mavenbird_Shiprestriction::Heading"
+             action="mavenbird_shiprestriction/rule/"
+             resource="Mavenbird_Shiprestriction::rule"/>
+             
+        <add id="Mavenbird_Shiprestriction::extensions"
+             title="Configuration"
+             module="Mavenbird_Shiprestriction"
+             sortOrder="9998"
+             action="adminhtml/system_config/edit/section/shiprestriction"
+             parent="Mavenbird_Shiprestriction::Heading"
+             resource="Mavenbird_Shiprestriction::extensions"/>
     </menu>
 </config>

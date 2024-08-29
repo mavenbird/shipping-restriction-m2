@@ -70,7 +70,7 @@
     </type>
         <type name="Mavenbird\Shiprestriction\Model\OptionProvider\Pool">
         <arguments>
-            <argument name="optionProviders" xsi:type="array">
+            <argument name="optionProviders" xsi:type="array">  
                 <item name="calculation" xsi:type="object">Mavenbird\Shiprestriction\Model\OptionProvider\Provider\CalculationOptionProvider</item>
                 <item name="carriers" xsi:type="object">Mavenbird\Shiprestriction\Model\OptionProvider\Provider\CarriersOptionProvider</item>
                 <item name="customer_group" xsi:type="object">Mavenbird\Shiprestriction\Model\OptionProvider\Provider\CustomerGroupOptionProvider</item>

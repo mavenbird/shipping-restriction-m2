@@ -336,7 +336,7 @@
             </argument>
         </column>
 
-        <actionsColumn name="actions" class="Mavenbird\Core\Ui\Component\Listing\Column\ViewAction">
+        <actionsColumn name="actions" class="Mavenbird\Shiprestriction\Ui\Component\Listing\Column\ViewAction">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="indexField" xsi:type="string">rule_id</item>

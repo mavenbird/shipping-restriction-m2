@@ -21,14 +21,14 @@
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
     <system>
-        <tab id="mavenbird" translate="label" sortOrder="999999" class="mavenbird-tab">
-            <label>Mavenbird Extensions</label>
+        <tab id="mavenbird" sortOrder="100" translate="label" class="tab-mavenbird-extensions">
+            <label><![CDATA[Mavenbird Extensions]]></label>
         </tab>
         <section id="shiprestriction" translate="label" type="text" sortOrder="190818" showInDefault="1" showInWebsite="1" showInStore="1">
+            <tab>mavenbird</tab>
             <resource>Mavenbird_Shiprestriction::config</resource>
             <class>separator-top</class>
             <label>Shipping Restrictions</label>
-            <tab>mavenbird</tab>
             <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                 <label>General</label>
                 <field id="tax" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
@@ -45,7 +45,17 @@
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                 </field>
             </group>
-
+             <group id="menu" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="0"
+                   showInStore="0">
+                <label>Menu</label>
+                <field id="enable" translate="label" type="select" sortOrder="10" showInDefault="1"
+                       showInWebsite="0" showInStore="0">
+                    <label>Enable Mavenbird Menu Item</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                <!--     <backend_model>Mavenbird\Shiprestriction\Model\Config\Backend\Menu</backend_model> -->
+                </field>
+                <frontend_model>Mavenbird\Shiprestriction\Block\MenuGroup</frontend_model>
+            </group>
         </section>
     </system>
 </config>

@@ -55,4 +55,19 @@
             <argument name="resource" xsi:type="object">Mavenbird\Shiprestriction\Model\ResourceModel\Rule</argument>
         </arguments>
     </type>
+        <type name="Magento\Backend\Block\Menu">
+        <plugin name="Mavenbird_Shiprestriction:menu" type="Mavenbird\Shiprestriction\Plugin\Backend\Block\Menu"/>
+    </type>
+
+    <type name="Magento\Backend\Model\Menu\Item">
+        <plugin name="Mavenbird_Shiprestriction:correct-market-url" type="Mavenbird\Shiprestriction\Plugin\Backend\Model\Menu\Item"/>
+    </type>
+
+    <type name="Magento\Backend\Model\Menu\Builder">
+        <plugin name="Mavenbird_Shiprestriction::menu_builder" type="Mavenbird\Shiprestriction\Plugin\Backend\Model\Menu\Builder"/>
+    </type>
+
+    <type name="Magento\Config\Model\Config\Structure">
+        <plugin name="Mavenbird_Shiprestriction:advertise" type="Mavenbird\Shiprestriction\Plugin\Backend\Model\Config\StructurePlugin"/>
+    </type>
 </config>

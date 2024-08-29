@@ -33,7 +33,7 @@ abstract class AbstractRule extends \Magento\Framework\Model\ResourceModel\Db\Ab
     public const ATTRIBUTE_TABLE_NAME = '';
 
     /**
-     * @var \Mavenbird\Core\Model\Serializer
+     * @var \Mavenbird\Shiprestriction\Model\Serializer
      */
     protected $serializer;
 
@@ -41,12 +41,12 @@ abstract class AbstractRule extends \Magento\Framework\Model\ResourceModel\Db\Ab
      * AbstractRule constructor.
      *
      * @param \Magento\Framework\Model\ResourceModel\Db\Context     $context        Database context.
-     * @param \Mavenbird\Core\Model\Serializer                      $serializer     Serializer instance.
+     * @param \Mavenbird\Shiprestriction\Model\Serializer                      $serializer     Serializer instance.
      * @param string|null                                           $connectionName Optional connection name.
      */
     public function __construct(
         \Magento\Framework\Model\ResourceModel\Db\Context $context,
-        \Mavenbird\Core\Model\Serializer $serializer,
+        \Mavenbird\Shiprestriction\Model\Serializer $serializer,
         $connectionName = null
     ) {
         parent::__construct($context, $connectionName);
